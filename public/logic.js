@@ -32,6 +32,8 @@ function createAlert(elem, msg) {
   emailForm.insertAdjacentElement("afterend", alertElement);
 }
 
+//computational-dusk-66xd5qe5flswdhhvqdwx4snb.herokudns.com
+
 function handleFormSubmit(e) {
   const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!pattern.test(emailForm.value.trim())) {
