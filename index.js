@@ -17,6 +17,7 @@ app.get("*", (req, res)=>{
 })
 
 app.post("/sendemail", (req, res)=>{
+    console.log
     var transporter = nodemailer.createTransport({
         service:'gmail',
         auth: {
@@ -27,7 +28,7 @@ app.post("/sendemail", (req, res)=>{
 
     var mailOptionsInternal = {
         from:'Collapse Data Backup',
-        to: 'gendel.ryan@gmail.com ',
+        to: 'sales@collapsedata.com',
         subject: 'This is a test: test',
         text:'TgK'
     }
