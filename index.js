@@ -13,10 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("*", (req, res)=>{
-    res.sendFile(path.join(__dirname,'./public/homepage.html'));
+    res.sendFile(path.join(__dirname,'./index.html'));
 })
 
 app.post("/sendemail", (req, res)=>{
+    console.log(req.body)
     console.log
     var transporter = nodemailer.createTransport({
         service:'gmail',
@@ -29,16 +30,18 @@ app.post("/sendemail", (req, res)=>{
     var mailOptionsInternal = {
         from:'Collapse Data Backup',
         to: 'sales@collapsedata.com',
-        subject: 'This is a test: test',
-        text:'TgK'
+        subject: req.body.email,
+        text:'Just subscribed'
     }
 
-    var mailOptionsExternal = {
-        from:'Collapse Data Backup',
-        to: 'ryangendel@u.northwestern.edu',
-        subject: 'This is a test: test',
-        text:'TgK'
-    }
+    // var mailOptionsExternal = {
+    //     from:'Collapse Data Backup',
+    //     to: req.body.email,
+    //     subject: 'Collapse Data Backup',
+    //     text:'Thanks for subscribing, one of our team members will get back to you shortly\
+    //     Thanks\
+    //     Collapse Data Team'
+    // }
 
     transporter.sendMail(mailOptionsInternal, function(error, info) {
         if (error) {
@@ -48,13 +51,14 @@ app.post("/sendemail", (req, res)=>{
         }
     })
 
-    transporter.sendMail(mailOptionsExternal, function(error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response)
-        }
-    })
+    // transporter.sendMail(mailOptionsExternal, function(error, info) {
+    //     if (error) {
+    //         console.log(error);
+    //     } else {
+    //         console.log('Email sent: ' + info.response)
+    //     }
+    // })
+    res.send(200)
 })
 
 // app.get("/comingsoon", (req, res)=>{
