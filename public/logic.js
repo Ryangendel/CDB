@@ -2,7 +2,7 @@ const navBar = document.querySelector(".nav");
 const navButton = document.querySelector(".nav-toggle");
 const counterElements = document.querySelectorAll(".get-started .counter");
 const footerForm = document.querySelector(".footer-form");
-const emailForm = footerForm.querySelector(".footer-email");
+// const emailForm = footerForm.querySelector(".footer-email");
 const videoContainer = document.querySelector(".video-learning");
 const video = videoContainer.querySelector(".video");
 const progress = videoContainer.querySelector(".progress");
@@ -11,6 +11,7 @@ const togglePlayButton = videoContainer.querySelector(".toggle");
 const skipButtons = videoContainer.querySelectorAll("[data-skip]");
 let mousedown = false;
 
+console.log("--------------------------------------kljljljk")
 // Hamburger Navigation
 function toggleNavigation() {
   if (navBar.classList.contains("is-open")) {
@@ -103,16 +104,24 @@ counterElements.forEach((counterElem) => counterObserver.observe(counterElem));
 // Event Listeners
 navButton.addEventListener("click", toggleNavigation);
 footerForm.addEventListener("submit", handleFormSubmit);
-video.addEventListener("click", togglePlay);
-video.addEventListener("play", changeButton);
-video.addEventListener("pause", changeButton);
-video.addEventListener("timeupdate", handleProgressBar);
-togglePlayButton.addEventListener("click", togglePlay);
-progress.addEventListener("click", handleProgressBarProgress);
-progress.addEventListener(
-  "mousemove",
-  (e) => mousedown && handleProgressBarProgress(e)
-);
-progress.addEventListener("mousedown", () => (mousedown = true));
-progress.addEventListener("mouseup", () => (mousedown = false));
-skipButtons.forEach((button) => button.addEventListener("click", skipSeconds));
+// video.addEventListener("click", togglePlay);
+// video.addEventListener("play", changeButton);
+// video.addEventListener("pause", changeButton);
+// video.addEventListener("timeupdate", handleProgressBar);
+// togglePlayButton.addEventListener("click", togglePlay);
+// progress.addEventListener("click", handleProgressBarProgress);
+// progress.addEventListener(
+//   "mousemove",
+//   (e) => mousedown && handleProgressBarProgress(e)
+// );
+// progress.addEventListener("mousedown", () => (mousedown = true));
+// progress.addEventListener("mouseup", () => (mousedown = false));
+// skipButtons.forEach((button) => button.addEventListener("click", skipSeconds));
+
+document.getElementById('form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  console.log("----------------------------")
+  window.location.href = "/#top"
+  document.getElementById('thankYouMessage').style.display = 'block';
+
+});

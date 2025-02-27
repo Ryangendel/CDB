@@ -13,12 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("*", (req, res)=>{
-    res.sendFile(path.join(__dirname,'./index.html'));
+    res.sendFile(path.join(__dirname,"public", './index.html'));
 })
 
 app.post("/sendemail", (req, res)=>{
-    console.log(req.body)
-    console.log
+
     var transporter = nodemailer.createTransport({
         service:'gmail',
         auth: {
@@ -58,7 +57,8 @@ app.post("/sendemail", (req, res)=>{
     //         console.log('Email sent: ' + info.response)
     //     }
     // })
-    res.send(200)
+    
+    res.redirect('/#top');
 })
 
 // app.get("/comingsoon", (req, res)=>{

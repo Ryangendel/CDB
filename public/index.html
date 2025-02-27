@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CDB</title>
+  <title>Collapse Data Backup</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./logic.js"></script>
+  
 </head>
 
 <body>
+  <div id="top"></div>
   <header id="header" class="header">
     <img src="./images/CDB_logo.png" class="logo" alt="Learn English" id="header-img" />
     <h2 id="company_name">Collapse Data Backup</h2>
     <nav id="nav-bar" class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#CDBfeatures">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#how-it-works">How It Works</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#get-started">Get Started</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link nav-link-cta" href="#subscribe">Subscribe</a>
         </li>
@@ -34,6 +35,7 @@
       <span class="hamburger"></span>
     </button>
   </header>
+  <p id="thankYouMessage" style="display: none; color: green; font-size: 2em;">Thanks for submitting your info someone will reach our shortly!</p>
   <main>
     <section class="intro">
       <h1 class="intro__title">
@@ -47,6 +49,7 @@
       <a href="#subscribe" class="button">Get Started</a>
       <img class="main__illustration" src="./images/digital_assets_image.png" alt="" />
     </section>
+    <span id="CDBfeatures"></span>
     <section id="features" class="features">
       <h2 class="visuallyhidden">Features</h2>
       <ul class="features__list">
@@ -160,18 +163,19 @@
       </h2>
       <a href="#subscribe" class="button">Get Started</a>
       <div class="video-learning">
-        <video muted id="video" class="video" poster="./images/Cybersecurity_Hero.svg">
+        <!-- <video muted id="video" class="video" poster="./images/Cybersecurity_Hero.svg"> -->
           <!--  The video was removed. You can add your own video using the tag below and the functionality will work as expected -->
-          <!--  <source src="" type="video/mp4" /> -->
-        </video>
-        <div class="video-controls">
+          <!--  <source src="" type="https://youtu.be/57nOGg2_Hiw" /> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/57nOGg2_Hiw?si=LvinsJ-kyk_tOn9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- </video> -->
+        <!-- <div class="video-controls">
           <div class="progress">
             <div class="progress-fill"></div>
           </div>
           <button class="video-button toggle" title="Play">►</button>
           <button data-skip="-5" class="video-button" aria-label="Skip backward 5 seconds">« 5s</button>
           <button data-skip="5" class="video-button" aria-label="Skip forward 5 seconds">5s »</button>
-        </div>
+        </div> -->
       </div>
       <svg width="1440" height="892" viewBox="0 0 1440 892" fill="none" xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true" class="blob-learning" style="overflow: visible;">
@@ -202,7 +206,7 @@
         <div>
           <h3 class="footer-title">Contact Us</h3>
           <ul>
-            <li><a class="footer-link" href="#">sales@collapsedata.com</a></li>
+            <li><a class="footer-link" href="mailto:sales@collapsedata.com">sales@collapsedata.com</a></li>
             <!-- <li><a class="footer-link" href="#">Support</a></li> -->
           </ul>
         </div>
@@ -224,14 +228,14 @@
         </form>
       </div>
       <ul class="footer-social">
-        <!-- <li>
+        <li>
               <a href="mailto:managera@fortituderanch.com?Subject=Hi%20Drew" rel="noopener noreferrer"><svg width="23" height="18" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <use xlink:href="#contact-email-icon"></use>
+                  <use xlink:href="#youtube-icon"></use>
                 </svg><span class="visuallyhidden">email</span>
               </a>
-            </li> -->
+            </li>
         <li>
-          <a href="https://www.instagram.com/fortituderanch/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/collapsesurvivorapp" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -696,7 +700,7 @@
         fill="#1DA1F2" fill-rule="evenodd" />
     </symbol>
   </svg>
-
+  <script src="./logic.js"></script>
   <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 

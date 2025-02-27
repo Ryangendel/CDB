@@ -237,7 +237,8 @@ a {
 
 .intro__illustration {
   max-width: 100%;
-  margin: 2rem 0;
+  margin-top: 4rem;
+  margin-bottom: 2rem 0;
   max-height: 220px;
 }
 
@@ -398,6 +399,7 @@ a {
 
   .grow__title {
     grid-area: title;
+    margin-top: 6rem;
   }
 
   .grow p {
